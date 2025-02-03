@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamify Expirian</title>
+    <link rel="shortcut icon" href="img/G_logo.png  " type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylesMICH.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- WhatsApp Icone -->
+    <div class="whatsapp-icon" onclick="toggleChat()">
+        <img src="img/CHIL_MASCOTE_ANIMADO.gif" alt="WhatsApp Logo">
+    </div>
+
+    <!-- Chat Pop-up -->
+    <div class="chat-popup" id="chatPopup">
+        <div class="chat-header">
+            <strong>MICH - IA</strong>
+        </div>
+        <div class="chat-body">
+            <label for="name">Nome</label>
+            <input type="text" id="name" placeholder="Seu nome">
+
+            <label for="phone">Telefone</label>
+            <input type="tel" id="phone" placeholder="+55">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="seuemail@exemplo.com">
+
+            <label for="role">Qual sua ocupação</label>
+            <select id="role">
+                <option value="">Selecione</option>
+                <option value="ceo">Estudante Ensino Médio</option>
+                <option value="manager">Profissional de Tecnologia</option>
+                <option value="employee">Estagiário</option>
+                <option value="employee">outra</option>
+            </select>
+
+            <input type="checkbox" id="privacy">
+            <label for="privacy">Concordo com a <a href="#">Política de Privacidade e os Termos & condições</a></label>
+        </div>
+        <div class="chat-footer">
+            <button onclick="sendWhatsAppMessage()">Enviar WhatsApp</button>
+        </div>
+    </div>
+
+    <header>
+        <a href="#Fundo1">
+        <img alt="Gamify Experian Logo" src="img/gamify1_logo.png" />
+        </a>
+        <nav>
+            <a href="#Fundo3">Quem somos</a>
+
+            <!-- Link "Gamificação" com Dropdown -->
+
+            <div class="dropdown">
+                <a class="dropdown-btn">Gamificação ▼</a>
+                <div class="dropdown-content">
+                    <a href="quiz01/indexQuiz.html">Quiz 1</a>
+                    <a href="quiz02/indexQuiz2.html">Quiz 2</a>
+                    <a href="Cursos/Cursos/indexCursos.html">Cursos</a>
+                </div>
+            </div>
+
+            <a href="blog-main/index.html">Blog</a>
+            <a href="form PI/index.html">Contato</a>
+        </nav>
+        <a id="button_login" class="login" href="login PI/index.html">Login</a>
+    </header>
+    <section id="Fundo1">
+        <div class="container">
+            <h1>Inovação que conecta o futuro</h1>
+            <p id="log">Gamifique sua vida e veja a diferença! Torne-se mais organizado, resolva problemas de maneira
+                criativa e aprenda a trabalhar em equipe – tudo de uma forma divertida e envolvente!</p>
+            <p><a href="login PI/index.html" class="button">START</a></p>
+        </div>
+    </section>
+    <section id="Fundo2">
+        <div class="header">
+            <h1>O que é Gamificação ?</h1>
+            Gamificação é a aplicação de elementos de jogos e mecânicas de jogo em contextos que não são jogos, com o
+            objetivo de engajar, motivar e influenciar comportamentos. Em um país com grandes desigualdades sociais e
+            educacionais, aplicar a gamificação pode ser uma maneira de democratizar o conhecimento e aproximar as
+            pessoas das novas tecnologias de forma mais acessível.
+        </div>
+        <div class="content">
+            <div class="laptop">
+                <img alt="Imagem de um laptop" src="img/imagem_pc.png" />
+                <!-- <div id="tela_pc">
+                    <div id="video"><iframe width="550" height="275"
+                            src="https://www.youtube.com/embed/r4aFp93f_qw?autoplay=1&mute=1&loop=1&si=jO_xsoB1-zPVVagC"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div> -->
+                <div id="tela_pc">
+                    <div id="video">
+                        <iframe 
+                            width="550" 
+                            height="275"
+                            src="https://www.youtube.com/embed/r4aFp93f_qw?autoplay=1&mute=1&loop=1&playlist=r4aFp93f_qw"
+                            title="YouTube video player" 
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+            <div class="features">
+                <div class="progress-bar">
+                    <img calss="alingImg" alt="Medalha de primeiro lugar" class="medal" height="50"
+                        src="img/medalha.png" width="50" />
+                </div>
+                <div class="feature-item1">
+                    <img calss="alingImg" alt="Ícone de criatividade" height="50" src="img/criatividade.png"
+                        width="50" />
+                    <span>Estimulo à Criatividade</span>
+                </div>
+                <div class="feature-item2">
+                    <img calss="alingImg" alt="Ícone de gestão de metas" height="50" src="img/gestao.png" width="50" />
+                    <span>Gestão de Metas</span>
+                </div>
+                <div class="feature-item3">
+                    <img calss="alingImg" alt="Ícone de quizzes e mini cursos" height="50" src="img/quizz.png"
+                        width="50" />
+                    <span>Quizzes e Mini Cursos</span>
+                </div>
+                <div class="feature-item4">
+                    <img calss="alingImg" alt="Ícone de desenvolvimento de habilidades" height="50"
+                        src="img/habilidades.png" width="50" />
+                    <span>Desenvolvimento de Habilidades</span>
+                </div>
+            </div>
+        </div>
+        <div class="ast">
+        </div>
+    </section>
+    <section id="Fundo3">
+        <div class="container">
+            <div class="text-section">
+                <h1>Quem somos?</h1>
+                <p>Somos uma plataforma de educação interativa que une tecnologia e educação financeira para transformar o aprendizado em uma experiência envolvente. Nosso objetivo é ajudar jovens e adultos de todo o Brasil a adquirir conhecimentos essenciais para o futuro.</p>
+                <div class="feature">
+                    <div>
+                        <h3>Crie Iniciativas Envolventes</h3>
+                        <p>Na Gamify Experian você pode criar , trilhas de aprendizagem, quizzes jogos e tudo de forma
+                            personalizada conforme suas necessidades.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div>
+                        <h3>Gamifique a Experiência.</h3>
+                        <p>Você pode atribuir pontos e conquistas nas missões, gerar rankings, narrativas e desafios que
+                            ajudam no engajamento dos participantes.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div>
+                        <h3>Recompensas</h3>
+                        <p>Aqui, reconhecemos os esforços de cada usuário, proporcionando recompensas exclusivas e uma
+                            experiência personalizada que torna o aprendizado uma verdadeira jornada.</p>
+                    </div>
+                </div>
+                <div>
+                    <a class="button" href="#title_pass">Acesso Básico!</a>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="img/recompensa_quem_somos.png" alt="imgaem de varias pessoas">
+            </div>
+        </div>
+    </section>
+    <section id="Fundo4">
+        <div class="container">
+            <div class="header">
+                <h1>Para quem é a Gamify Experian?</h1>
+                <p>Ideal para estudantes de todas as idades e adultos que desejam aprimorar seus conhecimentos em
+                    educação financeira e tecnologia, a Gamify Experian é acessível a pessoas de todo o Brasil. Junte-se
+                    a nós e descubra como aprender pode ser divertido!</p>
+            </div>
+            <div class="icons">
+                <div class="icon">
+                    <img alt="Icon representing a person with a crown and chat bubbles" src="img/Boneco_verde.png" />
+                </div>
+                <div class="icon">
+                    <img alt="Icon representing a person reading books with a light bulb"
+                        src="img/boneco_e_livro.png" />
+                </div>
+                <div class="icon">
+                    <img alt="Icon representing a computer with gears and a light bulb"
+                        src="img/computador_e_lampada.png" />
+                </div>
+            </div>
+            <h2 id="exemplo">Veja exemplos de Gamificações abaixo</h2>
+
+            <div class="examples">
+                <div class="carrossel">
+                    <div class="slides">
+                        <div class="slide active">
+                            <img src="img/blogcarrossel_1.png" alt="Slide 1">
+                        </div>
+                        <div class="slide">
+                            <img src="img/blogcarrossel_2.png" alt="Slide 2">
+                        </div>
+                        <div class="slide">
+                            <img src="img/blogcarrossel_3.png" alt="Slide 3">
+                        </div>
+                        <div class="slide">
+                            <img src="img/blogcarrossel_4.png" alt="Slide 4">
+                        </div>
+                        <!-- <div class="slide">
+                            <img src="img/Fundo_5.jpg" alt="Slide 5">
+                        </div> -->
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Fundo5">
+        <div class="container">
+            <img alt="Smartphone" src="img/celular1.png" />
+            <div class="text-content">
+                <h1>Como a Gamify Experian vai te ajudar?</h1>
+                <p>Hoje em dia, jovens e adultos enfrentam desafios constantes para se manterem engajados e motivados no aprendizado, especialmente em áreas essenciais como educação financeira e tecnologia.</p>
+                <div class="problem">
+                    <h2>O Problema:</h2>
+                    <p>Métodos tradicionais de gestão ou ensino frequentemente são monótonos e repetitivos, o que leva
+                        as pessoas a perderem o interesse e a dedicação. Concorrência com o celular e distrações agravam
+                        o problema!</p>
+                </div>
+                <div class="solution">
+                    <h2>A Solução:</h2>
+                    <p>As pessoas anseiam por experiências significativas e estimulantes. Nossa plataforma nasce para transformar essa realidade, quando as atividades oferecem um senso de propósito, progresso e recompensa, o interesse e o engajamento crescem exponencialmente. (Estudos apontam 50 a 70%)</p>
+                </div>
+                <!-- <div class="button">
+                    <button>Acesso Grátis!</button>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <section id="Fundo6">
+        <div class="container">
+            <div class="header">
+                <h1>Você Está Preparado?</h1>
+                <div class="container_img">
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-rocket"></i>
+                            <h3>Crie Jornadas Incríveis</h3>
+                            <p>Construa histórias e missões envolventes focadas em aprendizagem e produtividade.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-star"></i>
+                            <h3>
+                                Atribua uma Pontuação
+                            </h3>
+                            <p>
+                                Reconheça e valorize o progresso dos participantes com um sistema de pontuação.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="img_table">
+                        <img alt="Imagem de um tabuleiro de jogo com vários elementos de gamificação" class="main-image"
+                            height="350" src="img/Tabuleiro.png" width="350" />
+                    </div>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-trophy">
+                            </i>
+                            <h3>
+                                Configure Regras e Rankings
+                            </h3>
+                            <p>
+                                Crie regras claras e rankings para promover competição saudável e melhoria contínua.
+                            </p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-gift">
+                            </i>
+                            <h3>
+                                Recompense os Participantes
+                            </h3>
+                            <p>
+                                Ofereça recompensas e prêmios para motivar e engajar os participantes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <img src="img/esta_preparado_recompensas_branco.png" alt=""> -->
+            </div>
+        </div>
+    </section>
+    <section id="Fundo7">
+        <div class="header">
+            <h1>Tenha o controle das iniciativas em suas mãos!</h1>
+        </div>
+        <div class="content">
+            <div class="text">
+                <button id="botao1">Loja de Recompensas</button>
+                <button id="botao2">Rankings e Resultados</button>
+            </div>
+            <div class="image">
+                <div id="section_botao_1">
+                    <img alt="Imagem de um monitor mostrando a interface da loja de recompensas da Gamify" height="500"
+                        src="img/loja_recompensas.png" width="1200" />
+                    <p>Na Gamify você pode criar uma Loja Personalizada de Recompensas e cadastrar seus prêmios ou
+                        produtos. Os participantes podem resgatar usando os pontos que ganharam nas iniciativas, metas e
+                        gamificações.</p>
+                </div>
+                <div id="section_botao_2">
+                    <img alt="Imagem de um monitor mostrando a interface da loja de recompensas da Gamify" height="500"
+                        src="img/loja_gamify_ex03.png"
+                        width="1100" />
+                    <p>Acompanhe o desempenho da sua equipe em tempo real! Para explorar os rankings e resultados,
+                        garantindo visibilidade e reconhecimento para cada conquista.</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial">
+            <h2>O que nossos Clientes dizem?</h2>
+            <div class="profile">
+                <img alt="Foto de uma cliente satisfeita" height="100"
+                    src="https://storage.googleapis.com/a1aa/image/knz4iNsb1kLRI1xB3gCdzfCINXIliulyadD2qUufylFcvl0TA.jpg"
+                    width="100" />
+            </div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half"></i>
+            </div>
+            <p>
+                Estou feliz com a Gamify Experian, que me atende de maneira personalizada e atenciosa. O sistema
+                contribui muito para desenvolver e reconhecer os participantes, facilitando nossas rotinas e decisões futuras.
+                <br /><br>
+                Elex, estudante de Tecnologia.
+            </p>
+        </div>
+    </section>
+    <section id="Fundo8">
+        <div class="container">
+            <div id="title_pass" class="title">Escolha um dos nossos Planos</div>
+            <div class="plans">
+                <div class="plan">
+                    <div class="plan-icon"><i class="fas fa-user-nurse"></i></div>
+                    <div class="plan-title">Aprendiz</div>
+                    <div class="plan-details">
+                        Acesso a quizzes básicos<br><br>
+                        Adesivos e emblemas temáticos<br><br>
+                        Respostas limitadas<br><br>
+                        Participação em missões<br><br>
+                        Um curso introdutório<br>
+                       
+                    </div>
+                    <div class="plan-price">R$ 10,90</div>
+                    <div class="plan-type">Plano básico</div>
+                    <button class="plan-button">Começar Agora!</button>
+                </div>
+                <div class="plan">
+                    <div class="plan-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="plan-title">Explorador</div>
+                    <div class="plan-details">
+                        Acesso a 3 quizzes<br><br>
+                        2 cursos exclusivos e itens colecionáveis.<br><br>
+                        Acesso à loja Gamify<br><br>
+                        Ranking com premiações em pontos<br><br>
+                    </div>
+                    <div class="plan-price">R$ 28,90</div>
+                    <div class="plan-type">Plano intermediário</div>
+                    <button class="plan-button">Contratar Agora!</button>
+                </div>
+                <div class="plan">
+                    <div class="plan-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="plan-title">Avançado</div>
+                    <div class="plan-details">
+                        Acesso a 5 quizzes e cursos completos<br><br>
+                        Respostas Ilimitadas<br><br>
+                        50% de desconto na loja Gamify<br><br>
+                        Sorteios de assinaturas Netflix, Spotify  
+                    </div>
+                    <div class="plan-price">R$ 49,90</div>
+                    <div class="plan-type">Plano completo</div>
+                    <button class="plan-button">Contratar Agora!</button>
+                </div>
+                <div class="plan">
+                    <div class="plan-icon"><i class="fas fa-star"></i></div>
+                    <div class="plan-title">Masterclass</div>
+                    <div class="plan-details">
+                        Todos os recursos do plano "Avançado"<br><br>
+                        pacotes completos e itens raros<br><br>
+                        Acesso VIP à loja Gamify <br><br>
+                        Consultoria personalizada<br><br>
+                    </div>
+                    <div class="plan-price">R$ 64,90</div>
+                    <div class="plan-type">Plano premium</div>
+                    <button class="plan-button">Contratar Agora!</button>
+                </div>
+            </div>
+            <div class="footer_section_8">
+                <p>OS PLANOS ACIMA SÃO REFERENTES AO CONTRATO ANUAL, CLIQUE NO BOTÃO ABAIXO PARA CONHECER OUTRAS
+                    CONDIÇÕES!</p>
+                <br>
+                <button class="footer-button">Conheça melhor todos os Planos Gamify</button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>
+            © 2024 Gamify Experian. Todos os direitos reservados ao grupo MICH.
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
